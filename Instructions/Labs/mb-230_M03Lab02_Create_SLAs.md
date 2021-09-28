@@ -83,49 +83,50 @@ Detailed Steps
 1.  Navigate to  **> Service Management > Service Terms >Holiday Schedule**.
 1.  Click **New**. 
 1.  Type **UK Service Calendar [xx]** in the Name field and click **Create**. 
-a.  For Weekly Schedule : Select **Are the same each day** and **Monday to Friday**
-b.  Click **Set Work Hours**. 
-c.  Verify that on the first Work Hours line it says **9:00 AM** in the Start column and **5:00 PM** in the End column. 
-d.  Click **Add Break**. 
+    *For Weekly Schedule : Select **Are the same each day** and **Monday to Friday**
+    -  Click **Set Work Hours**. 
+    -  Verify that on the first Work Hours line it says **9:00 AM** in the Start column and **5:00 PM** in the End column. 
+    -  Click **Add Break**. 
+    
+    -  In the line that says Break, change the Start column to be **12:00 PM** and the End column to be **1:00 PM **
+    
+    -  Verify that the last Work Hours line shows **1:00 PM** for the Start and **5:00 PM** for the End
 
-e.  In the line that says Break, change the Start column to be **12:00 PM** and the End column to be **1:00 PM **
+1.  Click **OK**
 
-f.  Verify that the last Work Hours line shows **1:00 PM** for the Start and **5:00 PM** for the End
-
-g.  Click **OK**
-
-1.  In the Holiday Schedule area: 
-a.  Change the radio button to be **Observe**. 
-b.  Use the lookup to select the **Holiday UK [xx]** created earlier.
-c.  Select the appropriate time zone (GMT 0 Dublin, Edinburgh, Lisbon, London) 
-d.  Click **Save and Close**. 
+    1.  In the Holiday Schedule area: 
+    -  Change the radio button to be **Observe**. 
+    -  Use the lookup to select the **Holiday UK [xx]** created earlier.
+    -  Select the appropriate time zone (GMT 0 Dublin, Edinburgh, Lisbon, London) 
+    -  Click **Save and Close**. 
 
 
 ## Exercise 2 - Service Level Agreements
 
 ### Task 1 Create a Service Level Agreement
 In this task you will 
-* Create a new Service Level Agreement. 
-* Associate the Customer Service Schedule created in the previous step. 
-* Add SLA Details to show Failure and Warning times
+    - Create a new Service Level Agreement. 
+    - Associate the Customer Service Schedule created in the previous step. 
+    - Add SLA Details to show Failure and Warning times
 Detailed Steps 
-1.  Select  > Service Management > Service Terms > Service Level Agreements. 
-2.  Click New. 
-3.  Type Standard UK SLA [xx] in the Name
-4.  Select Case for the Primary Entity
-5.  Click Save
+1.  Select  **> Service Management > Service Terms > Service Level Agreements**. 
+1.  Click **New**. 
+1.  Type **Standard UK SLA [xx]** in the Name
+1.  Select **Case** for the Primary Entity
+1.  Click **Save**
 
-6.  Click New SLA Item
-a.  Name : Standard First Response
-b.  KPI: First Response By[xx]
-c.  Allow pause and Resume: Yes
-d.  Business Hours: UK Service Calendar [xx]
-e.  In the Applicable When area, click Add row
-f.  Enter Priority(Case) Does not equal Low. 
+1.  Click **New SLA Item**
+    -  Name : **Standard First Response**
+    -  KPI: **First Response By[xx]**
+    -  Allow pause and Resume: **Yes**
+    -  Business Hours: **UK Service Calendar [xx]**
+    -  In the Applicable When area, click **Add row**
+    -  Enter **Priority(Case) Does not equal Low**. 
+        ![image ](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1when.png)
+1.  In the Success Conditions area
+1.  Add row and enter **First Response Sent Equals Yes**
 
-
-
-
+        ![image ](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1Flow.png)
 1.  Click on the **Sitemap** button and select **Service**.
 
 2.  Click **Cases**.
