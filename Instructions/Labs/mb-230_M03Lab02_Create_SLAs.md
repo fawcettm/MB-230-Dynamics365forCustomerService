@@ -5,21 +5,21 @@ lab:
 ---
 
 # Module 3: Service Level Management
-==================================
+----
 
 ## Practice Lab 1 – Service Management Setup
 
 ### Scenario
---------
+-------
 
 As a customer service manager at City Power & Light, you need to create
 service level agreements to provide defined hours of service and response times both for accepting the case and for resolving the case. You will create an SLA and see the standard functionality. You will amend the SLA to add actions with Power Automate. To prepare for the SLA you need to setup Holidays Schedules, Working Hours and SLA KPIs.
 You must test the SLA for successful and failed outcomes.
 
-** N.B.    To work in a shared environment add your initials wherever the [xx] place holder is used. **
+**N.B.    To work in a shared environment add your initials wherever the [xx] place holder is used.**
 
 ### Exercise 1 – Setup Customer Service Hub for SLAs
--------------------------
+----
 
 SLA require SLA KPIs. These are performance indicators, such as First Response By or Resolve by, that you'd like to track. They can only be created for tables enabled for SLAs.
 For SLAs to adhere to working hours, Holiday schedules and Service schedules need to be created.
@@ -28,9 +28,9 @@ For SLAs to adhere to working hours, Holiday schedules and Service schedules nee
 
 In this task, you will create SLA KPIs for First Response and Resolution
 
-1.  Navigate to <wwllab006.crm.dynamics.
+1.  In your browser, navigate to office.com/apps/Business Apps.
 
-1.  Open **Customer Service Hub**.
+1.  Launch **Customer Service Hub**.
 
 1.  Click on the **Sitemap** button in the bottom left corner and click **Service Management.**
 
@@ -39,31 +39,32 @@ In this task, you will create SLA KPIs for First Response and Resolution
 1.  Click **New**.
 
 The New SLA KPI page appears.
-*  Name: Type  ** FirstResponseBy [xx] **
-*   Entity Name:    Select ** Case  **
-*   KPI Field: Select the ** FirstResponseByKPI ** field
-*  Applicable From: Select ** Created On **, (the warning and failure start time for an SLA will be calculated from the date and time when the entity was created)
+    -  Name: Type  **FirstResponseBy [xx]**
+    -   Entity Name:    Select **Case**
+    -   KPI Field: Select the **FirstResponseByKPI** field
+    -  Applicable From: Select **Created On**, (the warning and failure start time for an SLA will be calculated from the date and time when the entity was created)
 
 1. Click **Save**.
 1. Click **New** to create another KPI.
-*  Name: ** ResolveBy [xx] **
-*  Entity Name:    ** Case  **
-*  KPI Field:  ** ResolveByKPI ** 
-*  Applicable From: ** Created On **
+    -  Name: **ResolveBy [xx]**
+    -  Entity Name:    **Case**
+    -  KPI Field:  **ResolveByKPI** 
+    -  Applicable From: **Created On**
 1. Click **Save & Close**.
 1. Select both KPIs and click **Activate**, then confirm activation by clicking **Activate**
-
+---
 ### Task 2 – Define Pause for SLAs
 1. Go to **Service Configuration Settings / Select Pause Status**
-1. Select the Case table and move ** On Hold** and **Waiting** to the Selected list. **Save** the settings.
+1. Select the Case table and move **On Hold** and **Waiting** to the Selected list. **Save** the settings.
 
 
 
-
+---
 ### Task 3 – Set up Holidays
 
-In this task, you will * create a new holiday schedule
-* Add at least one holiday.
+In this task, you will 
+    - create a new holiday schedule
+    - Add at least one holiday.
 
 1. Navigate to  ** Service Management > Service Terms >Holiday Schedule**.
 1.  Click **New**. Type **Holiday UK [xx]** in the Name and click **Create**
@@ -73,22 +74,22 @@ In this task, you will * create a new holiday schedule
 1.  Enter the first Monday in May in the Start Date.
 1.  Enter the same in the End Date. 
 1.  Verify that Duration is 1 day and click **OK**. 
-
+---
 ### Task 4 Set up the Customer Service Schedule
 In this task you will 
-* Create a new Customer Service Schedule. 
-* Assign Work Hours. 
-* Associate the Holiday Schedule created earlier 
+    - Create a new Customer Service Schedule. 
+    - Assign Work Hours. 
+    - Associate the Holiday Schedule created earlier 
 Detailed Steps 
 1.  Navigate to  **> Service Management > Service Terms >Holiday Schedule**.
 1.  Click **New**. 
 1.  Type **UK Service Calendar [xx]** in the Name field and click **Create**. 
-    *For Weekly Schedule : Select **Are the same each day** and **Monday to Friday**
+    - For Weekly Schedule : Select **Are the same each day** and **Monday to Friday**
     -  Click **Set Work Hours**. 
     -  Verify that on the first Work Hours line it says **9:00 AM** in the Start column and **5:00 PM** in the End column. 
     -  Click **Add Break**. 
     
-    -  In the line that says Break, change the Start column to be **12:00 PM** and the End column to be **1:00 PM **
+    -  In the line that says Break, change the Start column to be **12:00 PM** and the End column to be **1:00 PM**
     
     -  Verify that the last Work Hours line shows **1:00 PM** for the Start and **5:00 PM** for the End
 
@@ -99,7 +100,7 @@ Detailed Steps
     -  Use the lookup to select the **Holiday UK [xx]** created earlier.
     -  Select the appropriate time zone (GMT 0 Dublin, Edinburgh, Lisbon, London) 
     -  Click **Save and Close**. 
-
+---
 
 ## Exercise 2 - Service Level Agreements
 
@@ -121,156 +122,79 @@ Detailed Steps
     -  Allow pause and Resume: **Yes**
     -  Business Hours: **UK Service Calendar [xx]**
     -  In the Applicable When area, click **Add row**
-    -  Enter **Priority(Case) Does not equal Low**. 
-        ![image ](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1when.png)
+    -  Enter **Priority(Case) Does not equal Low**. <br>
+        ![image ](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1when.png) <br>
 1.  In the Success Conditions area
 1.  Add row and enter **First Response Sent Equals Yes**
 
-        ![image ](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1Flow.png)
-1.  Click on the **Sitemap** button and select **Service**.
+       ![image ](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1success.png) <br>
+1.  In the Warn and Fail Duration set the following (for testing purposes)
+    -  Set the Warn After to **3 minutes **
+    -  Set the Failure After to **5 minutes **
+          ![image ](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1warn.png) <br>
+l. Click **Save**. Leave the Actions for later.
+1.  Click **Save & Close**. 
+1.  On the SLA record Click **Activate**. Confirm Activation.
+1.  Click **Set As Default**. (Only one SLA will be default so liaise with other students to test your SLA. Click **OK** to confirm.
+ ---
+### Task 2 Test SLA Built In Behaviour
 
-2.  Click **Cases**.
+In this task you will
+* Create 4 test cases for any account to test the SLA.
+1. Create cases for an account with case titles as follows:
+    - a.    **1 test success case resolution** . (can be created with Quick Create if preferred
+    - b.  **2 test success first response**
+    - c.  **3 test failure**
+    - d.  **4 test No SLA**, this needs to be created with a full New Case record so that you can change the priority to Low)
 
-3.  Click **+ New Case**.
+1.  Resolve the 1 test success case resolution within 5 minutes of creation.  
+1.  Update the 2 test success first response record set the First Response Sent to Yes
+1. Leave the 3 test failure case
+1. Observe the SLA Details on the 4 case records. 
+---
 
-4.  Enter *[your prefix ex. mollyc]+ Audio System Setup Issues* for **Case Title**, select *your user* for **Customer**, select **Email** for **Origin**, select
-    *[your prefix ex. mollyc]+ Entitlement 1* for **Entitlement** and click **Save**.
+### Task 3 Prepare to test Configure Actions for the SLA item
+In this task you will create a customer service team in Teams and add a channel for SLA issues in order to test the notification functionality from the SLA using Power Automate.
+1.  From Office launch Teams
+1.  Create a new public team called **Customer Service [xx]**
+1.  Add a channel called **SLA Issues**
+1.  Return to D365 **Customer Service Hub / Service Management/ Service Terms / Service Level Agreements**
+1.  Open the **Standard UK SLA [xx]**, click **Deactivate** and confirm **Deactivate**, select the first response SLA item, and then select **Edit SLA Item**. The SLA item page appears.
+1.  In the Actions area, select **Configure Actions**. The Power Automate application opens on a new tab (you may need to enable the PopUp) SLAs. <br>
+        ![image powerautomate ](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1PA.png)
+1.  Perform the following steps in Power Automate:
+1.  
+    * 1.1 Accept the default settings or select the ellipsis to configure a connection.
+    * 1.1 Select **Continue**. The predefined flow that's specific to the SLA appears.
+#### Note
+**We recommend that you don't edit the predefined flow, which can cause breaks in the flow, and the SLA might not work as defined.** <br>
+    ![image](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1Flow.png)
 
-5.  Click + New.
+1. Select **Switch**. The following condition steps are displayed for each of which you can configure a required action:
+    o   Is Near Non-Compliance: Will run when the warning time is reached for the SLA.
+    o   Is Succeeded: Will run when the SLA succeeds.
+    o   Is Non-compliant: Will run when the SLA fails.
 
-6.  Enter *[your prefix ex. mollyc]+ Defective Speaker* for **Case Title**, select *your user* for **Customer**, select **Facebook** for **Origin**, select **[your prefix ex. mollyc]+ Entitlement 1** for **Entitlement** and click **Save**.
+    ![image](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1PAfail.png)
 
-7.  Scroll to the **Entitlement** field and click on the **[your prefix ex. mollyc]+ Entitlement 1**
+1.  Select **[Do not delete or update] Is Near Non-Compliance** click **Add an action**.
+    o   Select Teams / post a message in chat or channel, and configure the following 
+    o   Post as: Flow Bot
+    o   Post In: Channel
+    o   Team: Customer Service [xx]
+    o   Channel: SLA Issues
+    o   Message: Warning! SLA nearing non compliance and use the trigger outputs to tailor the message. Refer to docs and open data protocol to retrieve the names for the case and owner if time. 
 
-8.  Go to the **Entitlement Terms** section and make sure you have **98
-    Remaining Terms**.
+1.  Repeat the steps to configure the actions for Is Succeeded and Is Non-compliant.
+A sample screenshot of the configured action is as follows.
 
-9.  Go to the **Entitlement Channel** sub-grid and make sure you have **49
-    Remaining Terms** for **Email**, **9 Remaining Terms** for **Facebook**,
-    **10 Remaining Terms** for **Twitter**, and **30 Remaining Terms** for
-    **Web**.
+    ![Image](https://raw.githubusercontent.com/fawcettm/MB-230-Dynamics365forCustomerService/master/Allfiles/Resources/Mod3/sla1PATeam.png)
+1. Save and exit Power Automate.
+#### Note
+More information: [Link Configure connectors in Power Automate](https://docs.microsoft.com/en-us/connectors/commondataserviceforapps/)
+1.  Select **Save & Close** on the SLA item dialog box.
+1.  Define as many SLA items as you need.
+1.  Select **Activate**. The SLA is activated.
+1.  **Set as Default** (Deactivating & Reactivating the SLA will not persist the Default SLA flag)
+1.  Test
 
-Exercise 2 – Entitlement Templates
-----------------------------------
-
-In this exercise, you will create an entitlement template that will have 20 free
-terms and the customer will be able to select the channel they prefer during the
-entitlement creation.
-
-### Task 1 – Create Entitlement Templates
-
-In this task, you will create an entitlement template with 20 terms.
-
-1.  Click on the **Sitemap** button and select
-    **Service Management**.
-
-2.  Click **Entitlement Templates**.
-
-3.  Click **+ New**.
-
-4.  Enter *[your prefix ex. mollyc]+ 20 Free Terms* for **Entitlement Template Name**, select **Yes**
-    for **Restrict on Entitlement Terms**, select **Number of Cases** for
-    **Allocation Type**, select **Case Creation** for **Decrease Remaining On**,
-    enter **20** for **Total Terms** and click **Save**. DO NOT navigate away
-    from this page.
-
-### Task 2 – Create Entitlement from Template
-
-In this task, you will create 20 phone call only entitlement from the
-entitlement template you created.
-
-1.  Click **Entitlements**.
-
-2.  Click on the **V** chevron button next to the **New** button and select
-    **From Template**.
-
-3.  Select *[your prefix ex. mollyc]+20 Free Terms* for **Entitlement Template** and click **Select**.
-
-4.  Some of the fields will be auto-filled from the template.
-
-5.  Enter *[your prefix ex. mollyc]+ Phone Call Only Terms* for **Name**, select *your user* for
-    **Primary Customer**, select today’s date for **Start Date**, select a year
-    from today for **End Date,** and click **Save**.
-
-6.  Go to the **Entitlement Channel** sub-grid, click on the ellipsis and select **+New Entitlement Channel**.
-
-7.  Select **Phone** for **Name**, enter **20** for **Total Terms** and click
-    **Save & Close**.
-
-8.  Click on the ellipsis and select **+New Entitlement Channel**.
-
-9.  Select **Email** for **Name**, enter **0** for **Total Terms** and click
-    **Save & Close**.
-
-10. Click on the ellipsis and select **+New Entitlement Channel**.
-
-11. Select **Web** for **Name**, enter **0** for **Total Terms** and click
-    **Save & Close**.
-
-12. Click on the ellipsis and select **+New Entitlement Channel**.
-
-13. Select **Facebook** for **Name**, enter **0** for **Total Terms** and click
-    **Save & Close**.
-
-14. Click on the ellipsis and select **+New Entitlement Channel**.
-
-15. Select **Twitter** for **Name**, enter **0** for **Total Terms** and click
-    **Save & Close**.
-
-16. Click **Activate**.
-
-17. Confirm activation. DO NOT navigate away from this page.
-
-### Task 3 – Test the Entitlement
-
-In this task, you will test the entitlement you created from the entitlement
-template.
-
-1.  Click on the **Sitemap** button and select
-    **Service**.
-
-2.  Click **Cases**.
-
-3.  Click **+ New Case**.
-
-4.  Enter *[your prefix ex. mollyc]+ Missing Parts* for **Case Title** and select *your user* for
-    **Customer**.
-
-5.  Select **Phone** for **Origin**, select *[your prefix ex. mollyc]+ Phone Call Only Terms* for
-    **Entitlement** and click **Save**.
-
-6.  Click **+ New**.
-
-7.  Enter *[your prefix ex. mollyc]+ wrong cables* for **Case Title** and select **Jim Glynn** for
-    **Customer**.
-
-8.  Select **Web** for **Origin**, select *[your prefix ex. mollyc]+Phone Call Only Terms* for
-    **Entitlement** and click **Save**.
-
-9.  Scroll down to the **Entitlement** field and click **Phone Call Only
-    Terms**.
-
-10. Click **Save**. You will get an error telling you that there are no
-    available terms.
-
-11. Click **OK**.
-
-12. You should get the same error if you select Email, Facebook or Twitter for
-    Origin.
-
-13. Select **Web** for **Origin** and clear the **Entitlement** field.
-
-14. Click **Save**.
-
-15. Since you didn’t select the **Phone Call Only Terms** entitlement, the Case
-    will now be created.
-
-16. Click on the **Sitemap** button and select
-    **Service Management**.
-
-17. Click on the **Site Map** button and select **Entitlements**.
-
-18. Click to open the *[your prefix ex. mollyc]+ Phone Call Only Terms*.
-
-19. Make sure you have **19 Remaining Terms** and **19 Phone** channel
-    **Remaining Terms**.
